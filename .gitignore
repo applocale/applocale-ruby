@@ -6,3 +6,7 @@
 /pkg/
 /spec/reports/
 /tmp/
+/test/sample-locales
+
+/config/applocale.yml
+*.applocale.yml
