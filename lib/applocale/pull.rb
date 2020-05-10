@@ -8,7 +8,7 @@ module AppLocale
         response = client.project_information
         if response.dig("success")
           languages = response.dig("languages")
-          puts "[AppLocale] Received #{languages} from AppLocale..." if options[:verbose]
+          puts "[AppLocale] ↳ Received #{languages} from AppLocale..." if options[:verbose]
         else
           puts "[AppLocale] #{response.dig('message')}"
           exit 1
@@ -20,7 +20,7 @@ module AppLocale
           puts "[AppLocale] Fetching translations for #{language_code}..."
           response = client.export(language_code)
           if response.dig("success")
-            puts "[AppLocale] Received #{response} from AppLocale" if options[:verbose]
+            puts "[AppLocale] ↳ Received #{response} from AppLocale" if options[:verbose]
             AppLocale::FileWriter.new(config, options).call(response)
           else
             puts "[AppLocale] #{response.dig('message')}"

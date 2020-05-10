@@ -8,7 +8,7 @@ module AppLocale
       relative_file_path = "#{config.locale_directory}/#{response.dig('language_code')}.yml"
       file_path = File.expand_path(relative_file_path)
       File.write(file_path, response.dig('yaml'))
-      puts "[AppLocale] Wrote translations for #{response.dig('language_code')} to #{relative_file_path}"
+      puts "[AppLocale] ↳ Wrote translations for #{response.dig('language_code')} to #{relative_file_path}"
     end
 
     private
