@@ -3,7 +3,7 @@ PATH
   specs:
     applocale-ruby (0.0.2)
       httparty (~> 0.18.0)
-      thor (~> 1.0)
+      thor (>= 0.18.0)
 
 GEM
   remote: https://rubygems.org/

@@ -1,15 +1,31 @@
-# Applocale::Ruby
+# AppLocale
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/applocale/ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to AppLocale's Ruby gem. This gem helps customers of AppLocale.dev to easily pull down their
+latest translations with a simple `bundle exec applocale pull`.
 
-TODO: Delete this and the text above, and describe your gem
+Getting started with AppLocale will give you a free 14-day trial.
 
 ## Installation
+
+### With our RailsBytes application template:
+
+This application template will install the gem for you, and walk you through setting up a configration file for your project. You'll need to login to your https://applocale.dev account, click on your avatar and click API Tokens to have the information ready for this step.
+
+You should **always** review contents of scripts you run before hand, you may do so by visiting this url and reading the script: https://railsbytes.com/public/templates/X8Bsjj
+
+```
+rails app:template LOCATION="https://railsbytes.com/script/X8Bsjj"
+```
+
+### Manually:
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'applocale-ruby'
+
+group :development do
+  gem 'applocale-ruby'
+end
 ```
 
 And then execute:
@@ -20,20 +36,42 @@ Or install it yourself as:
 
     $ gem install applocale-ruby
 
+Then follow the instructions in Usage to setup your configuration file.
+
 ## Usage
 
-TODO: Write usage instructions here
+Using AppLocale's gem requires a configuration file to be present. By default we assume this file to
+live at `config/applocale.yml` but you can alternatively run each command with `--config-file=path-to-applocale.yml`
 
-## Development
+You'll need to login to your https://applocale.dev account, click on your avatar and click API Tokens to have the information ready for this step after creating an API Token and Project.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+**Sample configuration file:**
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```yaml
+applocale:
+  project_id: 234qfewaf
+  api_key: API_KEY_HERE
+  locale_directory: "config/locales" # Default, you can override this if you wish.
+```
+
+Once you have your configuration file setup for your project you can proceed to use the following commands.
+
+After that, to pull ALL your setup languages in AppLocale:
+
+```
+bundle exec applocale pull
+```
+
+Or just your specified languages:
+
+```
+bundle exec applocale en es
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/applocale-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/applocale/applocale-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Code of Conduct
 
-Everyone interacting in the Applocale::Ruby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/applocale-ruby/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Applocale::Ruby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/applocale/applocale-ruby/blob/master/CODE_OF_CONDUCT.md).
