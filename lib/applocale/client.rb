@@ -1,4 +1,4 @@
-require 'httparty'
+require "httparty"
 
 module AppLocale
   class Client
@@ -33,7 +33,7 @@ module AppLocale
     def export_params(language)
       export_params = { project_id: project_id }
       if language
-        export_params.merge!(locale: language)
+        export_params[:locale] = language
       end
       export_params
     end
@@ -64,9 +64,9 @@ module AppLocale
     def base_payload(body = {}, options = {})
       {
         headers: {
-          'Accept' => 'application/json',
-          'Authorization' => "Bearer #{params[:api_key]}",
-          'User-Agent' => "AppLocale-Ruby:#{AppLocale::VERSION}"
+          "Accept" => "application/json",
+          "Authorization" => "Bearer #{params[:api_key]}",
+          "User-Agent" => "AppLocale-Ruby:#{AppLocale::VERSION}"
         },
         body: body
       }.merge(options)
@@ -75,7 +75,7 @@ module AppLocale
     # Private: base_uri
     #
     def base_uri
-      return "http://localhost:5000/api/v1" if ENV['APPLOCALE_DEVELOPMENT']
+      return "http://localhost:5000/api/v1" if ENV["APPLOCALE_DEVELOPMENT"]
 
       "https://applocale.dev/api/v1"
     end

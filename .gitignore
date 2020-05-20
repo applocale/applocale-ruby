@@ -10,3 +10,4 @@
 
 /config/applocale.yml
 *.applocale.yml
+.solargraph.yml
