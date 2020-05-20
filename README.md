@@ -1,5 +1,8 @@
 # AppLocale
 
+![StandardRB](https://github.com/applocale/applocale-ruby/workflows/StandardRB/badge.svg)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
+
 Welcome to AppLocale's Ruby gem. This gem helps customers of AppLocale.dev to easily pull down their
 latest translations with a simple `bundle exec applocale pull`.
 
@@ -71,6 +74,12 @@ bundle exec applocale en es
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/applocale/applocale-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+### Code Formatting
+
+This project uses [Standard](https://github.com/testdouble/standard) to minimize bike shedding related to source formatting.
+
+Please run `./bin/format` prior to submitting pull requests.
 
 ## Code of Conduct
 

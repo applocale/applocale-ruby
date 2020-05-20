@@ -8,6 +8,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    ast (2.4.0)
     httparty (0.18.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -16,8 +17,27 @@ GEM
     mime-types-data (3.2020.0512)
     minitest (5.14.0)
     multi_xml (0.6.0)
+    parallel (1.19.1)
+    parser (2.7.1.2)
+      ast (~> 2.4.0)
+    rainbow (3.0.0)
     rake (10.5.0)
+    rexml (3.2.4)
+    rubocop (0.83.0)
+      parallel (~> 1.10)
+      parser (>= 2.7.0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      rexml
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-performance (1.5.2)
+      rubocop (>= 0.71.0)
+    ruby-progressbar (1.10.1)
+    standard (0.4.2)
+      rubocop (~> 0.83.0)
+      rubocop-performance (~> 1.5.2)
     thor (1.0.1)
+    unicode-display_width (1.7.0)
 
 PLATFORMS
   ruby
@@ -27,6 +47,7 @@ DEPENDENCIES
   bundler (~> 2.0)
   minitest (~> 5.0)
   rake (~> 10.0)
+  standard (~> 0.4)
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
