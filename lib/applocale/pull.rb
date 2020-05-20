@@ -10,7 +10,7 @@ module AppLocale
           languages = response.dig("languages")
           puts "[AppLocale] ↳ Received #{languages} from AppLocale..." if options[:verbose]
         else
-          puts "[AppLocale] #{response.dig('message')}"
+          puts "[AppLocale] #{response.dig("message")}"
           exit 1
         end
       end
@@ -23,7 +23,7 @@ module AppLocale
             puts "[AppLocale] ↳ Received #{response} from AppLocale" if options[:verbose]
             AppLocale::FileWriter.new(config, options).call(response)
           else
-            puts "[AppLocale] #{response.dig('message')}"
+            puts "[AppLocale] #{response.dig("message")}"
             exit 1
           end
         end
@@ -36,7 +36,7 @@ module AppLocale
     private
 
     def params
-      { api_key: config.api_key, project_id: config.project_id }
+      {api_key: config.api_key, project_id: config.project_id}
     end
 
     def client

@@ -2,10 +2,10 @@ require "thor"
 
 module AppLocale
   class Cli < ::Thor
-    class_option 'config-file',
+    class_option "config-file",
       default: "config/applocale.yml",
       desc: "Customize the location of the config file"
-    class_option 'verbose',
+    class_option "verbose",
       type: :boolean,
       desc: "Turn on additional logging, helpful for debugging."
 
@@ -30,7 +30,7 @@ module AppLocale
     private
 
     def config
-      @config ||= AppLocale::Config.load(options['config-file'])
+      @config ||= AppLocale::Config.load(options["config-file"])
     end
   end
 end

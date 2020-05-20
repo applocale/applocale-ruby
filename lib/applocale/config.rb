@@ -12,9 +12,9 @@ module AppLocale
     def initialize(config_file)
       @config_file = config_file
       parse_config_file!
-      @api_key = env_or_config_value('api_key')
-      @project_id = env_or_config_value('project_id')
-      @locale_directory = env_or_config_value('locale_directory', default: 'config/locales')
+      @api_key = env_or_config_value("api_key")
+      @project_id = env_or_config_value("project_id")
+      @locale_directory = env_or_config_value("locale_directory", default: "config/locales")
     end
 
     def parse_config_file!
@@ -22,11 +22,11 @@ module AppLocale
 
       file_content = File.read(config_file_path)
       parsed_config_file = ERB.new(file_content).result
-      @configuration_data = YAML.load(parsed_config_file).dig("applocale") || {}
+      @configuration_data = YAML.safe_load(parsed_config_file).dig("applocale") || {}
     end
 
     def validate_config_file!
-      unless File.exists?(config_file_path)
+      unless File.exist?(config_file_path)
         puts "[AppLocale] Error: #{config_file_path} does not exist."
         exit 1
       end
