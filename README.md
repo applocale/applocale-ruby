@@ -13,7 +13,7 @@ Getting started with AppLocale will give you a free 14-day trial.
 
 ### With our RailsBytes application template:
 
-This application template will install the gem for you, and walk you through setting up a configration file for your project. You'll need to login to your https://applocale.dev account, click on your avatar and click API Tokens to have the information ready for this step.
+This application template will install the gem for you, and walk you through setting up a configuration file for your project. You'll need to login to your https://applocale.dev account, click on your avatar and click API Tokens to have the information ready for this step.
 
 You should **always** review contents of scripts you run before hand, you may do so by visiting this url and reading the script: https://railsbytes.com/public/templates/X8Bsjj
 
@@ -84,4 +84,4 @@ Please run `./bin/format` prior to submitting pull requests.
 
 ## Code of Conduct
 
-Everyone interacting in the Applocale::Ruby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/applocale/applocale-ruby/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Applocale::Ruby project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/applocale/applocale-ruby/blob/master/CODE_OF_CONDUCT.md).
