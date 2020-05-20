@@ -1,5 +1,6 @@
 # AppLocale
 
+![Tests](https://github.com/applocale/applocale-ruby/workflows/Tests/badge.svg)
 ![StandardRB](https://github.com/applocale/applocale-ruby/workflows/StandardRB/badge.svg)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
 
