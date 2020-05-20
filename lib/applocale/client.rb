@@ -31,7 +31,7 @@ module AppLocale
     end
 
     def export_params(language)
-      export_params = {project_id: project_id}
+      export_params = { project_id: project_id }
       if language
         export_params[:locale] = language
       end
