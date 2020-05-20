@@ -2,6 +2,8 @@ require "thor"
 
 module AppLocale
   class Cli < ::Thor
+    include Thor::Actions
+
     class_option "config-file",
       default: "config/applocale.yml",
       desc: "Customize the location of the config file"
@@ -18,6 +20,7 @@ module AppLocale
 
     > $ applocale pull en es de
     LONGDESC
+
     def pull(*languages)
       AppLocale::Pull.new(config, options).call(languages)
     end
@@ -25,6 +28,15 @@ module AppLocale
     desc "version", "Print the current version"
     def version
       puts "AppLocale Version: #{AppLocale::VERSION}"
+    end
+
+    def self.source_root
+      File.dirname(__FILE__) + "/templates"
+    end
+
+    desc "init", "Generate config file"
+    def init
+      copy_file "config.yml", "config/applocale.yml"
     end
 
     private
