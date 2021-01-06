@@ -69,7 +69,7 @@ bundle exec applocale pull
 Or just your specified languages:
 
 ```
-bundle exec applocale en es
+bundle exec applocale pull en es
 ```
 
 ## Contributing
