@@ -1,3 +1,9 @@
+### AppLocale.dev has ceased operations as of Sep 30th, 2020.
+
+Thank you all for your interest and support. Ultimatly it was not viable to continue operations... but I'll leave the repo in place for folks to learn from. 
+
+- Andrea Fomera
+
 # AppLocale
 
 ![Tests](https://github.com/applocale/applocale-ruby/workflows/Tests/badge.svg)
