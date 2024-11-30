@@ -1,9 +1,3 @@
-### AppLocale.dev has ceased operations as of Sep 30th, 2020.
-
-Thank you all for your interest and support. Ultimatly it was not viable to continue operations... but I'll leave the repo in place for folks to learn from. 
-
-- Andrea Fomera
-
 # AppLocale
 
 ![Tests](https://github.com/applocale/applocale-ruby/workflows/Tests/badge.svg)
@@ -13,19 +7,7 @@ Thank you all for your interest and support. Ultimatly it was not viable to cont
 Welcome to AppLocale's Ruby gem. This gem helps customers of AppLocale.dev to easily pull down their
 latest translations with a simple `bundle exec applocale pull`.
 
-Getting started with AppLocale will give you a free 14-day trial.
-
 ## Installation
-
-### With our RailsBytes application template:
-
-This application template will install the gem for you, and walk you through setting up a configuration file for your project. You'll need to login to your https://applocale.dev account, click on your avatar and click API Tokens to have the information ready for this step.
-
-You should **always** review contents of scripts you run before hand, you may do so by visiting this url and reading the script: https://railsbytes.com/public/templates/X8Bsjj
-
-```
-rails app:template LOCATION="https://railsbytes.com/script/X8Bsjj"
-```
 
 ### Manually:
 
@@ -53,12 +35,13 @@ Then follow the instructions in Usage to setup your configuration file.
 Using AppLocale's gem requires a configuration file to be present. By default we assume this file to
 live at `config/applocale.yml` but you can alternatively run each command with `--config-file=path-to-applocale.yml`
 
-You'll need to login to your https://applocale.dev account, click on your avatar and click API Tokens to have the information ready for this step after creating an API Token and Project.
+You'll need to login to your AppLocale instance and login to your account, click API Tokens to have the information ready for this step after creating an API Token and Project.
 
 **Sample configuration file:**
 
 ```yaml
 applocale:
+  host: https://translations.example.com
   project_id: 234qfewaf
   api_key: API_KEY_HERE
   locale_directory: "config/locales" # Default, you can override this if you wish.

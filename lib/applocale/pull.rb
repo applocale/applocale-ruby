@@ -36,7 +36,7 @@ module AppLocale
     private
 
     def params
-      { api_key: config.api_key, project_id: config.project_id }
+      { api_key: config.api_key, project_id: config.project_id, base_uri: config.host }
     end
 
     def client

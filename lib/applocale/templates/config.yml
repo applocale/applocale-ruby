@@ -1,5 +1,6 @@
 # AppLocale.dev configuration file
 
 applocale:
+  host:
   api_key:
   project_id:

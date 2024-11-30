@@ -5,8 +5,8 @@ require "applocale/version"
 Gem::Specification.new do |spec|
   spec.name = "applocale-ruby"
   spec.version = AppLocale::VERSION
-  spec.authors = ["Andrew Fomera"]
-  spec.email = ["andrew@zerlex.net"]
+  spec.authors = ["Andrea Fomera"]
+  spec.email = ["andrea@zerlex.net"]
 
   spec.summary = "Easily pull in your locales from AppLocale.dev"
   spec.description = "Easily pull in your locales from AppLocale.dev"

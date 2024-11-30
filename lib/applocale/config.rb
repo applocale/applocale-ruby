@@ -3,7 +3,7 @@ require "yaml"
 
 module AppLocale
   class Config
-    attr_accessor(:config_file, :configuration_data, :api_key, :project_id, :locale_directory)
+    attr_accessor(:config_file, :configuration_data, :api_key, :host, :project_id, :locale_directory)
 
     def self.load(config_file)
       new(config_file)
@@ -14,6 +14,7 @@ module AppLocale
       parse_config_file!
       @api_key = env_or_config_value("api_key")
       @project_id = env_or_config_value("project_id")
+      @host = env_or_config_value("host")
       @locale_directory = env_or_config_value("locale_directory", default: "config/locales")
     end
 

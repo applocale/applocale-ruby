@@ -73,11 +73,8 @@ module AppLocale
     end
 
     # Private: base_uri
-    #
     def base_uri
-      return "http://localhost:5000/api/v1" if ENV["APPLOCALE_DEVELOPMENT"]
-
-      "https://applocale.dev/api/v1"
+      params[:base_uri] + "/api/v1"
     end
   end
 end
